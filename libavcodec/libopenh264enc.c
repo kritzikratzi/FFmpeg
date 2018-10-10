@@ -133,12 +133,12 @@ FF_ENABLE_DEPRECATION_WARNINGS
     param.iPicHeight                 = avctx->height;
     param.iTargetBitrate             = avctx->bit_rate;
     param.iMaxBitrate                = FFMAX(avctx->rc_max_rate, avctx->bit_rate);
-    param.iRCMode                    = RC_QUALITY_MODE;
+    param.iRCMode                    = RC_BUFFERBASED_MODE;
     param.iTemporalLayerNum          = 1;
     param.iSpatialLayerNum           = 1;
     param.bEnableDenoise             = 0;
-    param.bEnableBackgroundDetection = 1;
-    param.bEnableAdaptiveQuant       = 1;
+    param.bEnableBackgroundDetection = 0;
+    param.bEnableAdaptiveQuant       = 0;
     param.bEnableFrameSkip           = s->skip_frames;
     param.bEnableLongTermReference   = 0;
     param.iLtrMarkPeriod             = 30;
